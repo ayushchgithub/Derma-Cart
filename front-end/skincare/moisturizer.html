@@ -18,7 +18,6 @@
       line-height: 1.6;
     }
 
-    /* Hero */
     .hero {
       background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
       text-align: center;
@@ -37,7 +36,6 @@
       color: #555;
     }
 
-    /* Products Section */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,7 +111,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Hide extra cards initially */
     .hidden {
       display: none;
     }
@@ -121,13 +118,13 @@
 </head>
 <body>
 
-  <!-- Hero -->
+
   <section class="hero">
     <h1>Moisturizers 💧</h1>
     <p>Keep your skin hydrated and glowing all day.</p>
   </section>
 
-  <!-- Moisturizer Products -->
+
   <section class="products" id="moisturizer-products">
     <div class="card">
       <img src="../pictures/images/moisturizer/product-1.webp" alt="Moisturizer">
@@ -153,7 +150,7 @@
       <button class="btn">Click Here</button>
     </div>
 
-    <!-- Hidden Moisturizer Cards -->
+  
     <div class="card hidden">
       <img src="../pictures/images/moisturizer/product-4.webp" alt="Moisturizer">
       <h3>Oil-Free Moisturizer</h3>
@@ -179,13 +176,13 @@
     </div>
   </section>
 
-  <!-- Toggle Button -->
+
   <div class="toggle-container">
     <button id="moisturizer-toggle" class="toggle-btn">View All Moisturizers</button>
   </div>
 
   <script>
-    // Button click alert
+  
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -193,7 +190,8 @@
       });
     });
 
-    // Toggle show/hide
+  
+    
     const toggleBtn = document.getElementById('moisturizer-toggle');
     const hiddenCards = document.querySelectorAll('#moisturizer-products .hidden');
     let expanded = false;

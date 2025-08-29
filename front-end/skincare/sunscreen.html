@@ -18,7 +18,7 @@
       line-height: 1.6;
     }
 
-    /* Hero */
+ 
     .hero {
       background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
       text-align: center;
@@ -37,7 +37,7 @@
       color: #555;
     }
 
-    /* Products Section */
+  
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,7 +113,7 @@
       margin-bottom: 2rem;
     }
 
-    /* Hide extra cards initially */
+ 
     .hidden {
       display: none;
     }
@@ -121,13 +121,12 @@
 </head>
 <body>
 
-  <!-- Hero -->
   <section class="hero">
     <h1>Sunscreen ☀️</h1>
     <p>Protect your skin from harmful UV rays.</p>
   </section>
 
-  <!-- Sunscreen Products -->
+
   <section class="products" id="sunscreen-products">
     <div class="card">
       <img src="../pictures/images/sunscreen/product-1.avif" alt="Sunscreen">
@@ -153,7 +152,7 @@
       <button class="btn">Click Here</button>
     </div>
 
-    <!-- Hidden Sunscreen Cards -->
+
     <div class="card hidden">
       <img src="../pictures/images/sunscreen/product-4.jpg" alt="Sunscreen">
       <h3>Aloe Vera Sunscreen</h3>
@@ -179,13 +178,12 @@
     </div>
   </section>
 
-  <!-- Toggle Button -->
   <div class="toggle-container">
     <button id="sunscreen-toggle" class="toggle-btn">View All Sunscreens</button>
   </div>
 
   <script>
-    // Button click alert
+
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -193,7 +191,6 @@
       });
     });
 
-    // Toggle show/hide
     const toggleBtn = document.getElementById('sunscreen-toggle');
     const hiddenCards = document.querySelectorAll('#sunscreen-products .hidden');
     let expanded = false;

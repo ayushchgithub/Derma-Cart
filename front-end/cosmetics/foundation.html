@@ -121,13 +121,12 @@
 </head>
 <body>
 
-  <!-- Hero -->
   <section class="hero">
     <h1>Skin Foundations 💄</h1>
     <p>Perfect coverage for a flawless look.</p>
   </section>
 
-  <!-- Foundation Products -->
+ 
   <section class="products" id="foundation-products">
     <div class="card">
       <img src="../pictures/images/foundation/product-1.webp" alt="Foundation">
@@ -153,7 +152,6 @@
       <button class="btn">Click Here</button>
     </div>
 
-    <!-- Hidden Foundation Cards -->
     <div class="card hidden">
       <img src="../pictures/images/foundation/product-4.jpg" alt="Foundation">
       <h3>Full Coverage Foundation</h3>
@@ -179,13 +177,12 @@
     </div>
   </section>
 
-  <!-- Toggle Button -->
+
   <div class="toggle-container">
     <button id="foundation-toggle" class="toggle-btn">View All Foundations</button>
   </div>
 
   <script>
-    // Button click alert
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -193,7 +190,7 @@
       });
     });
 
-    // Toggle show/hide
+
     const toggleBtn = document.getElementById('foundation-toggle');
     const hiddenCards = document.querySelectorAll('#foundation-products .hidden');
     let expanded = false;

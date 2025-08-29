@@ -18,7 +18,6 @@
       line-height: 1.6;
     }
 
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, #ffd6e8, #ffe6f0);
       text-align: center;
@@ -37,7 +36,6 @@
       color: #555;
     }
 
-    /* Products Section */
     .products {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -114,7 +112,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Hide extra cards initially */
     .hidden {
       display: none;
     }
@@ -122,13 +119,11 @@
 </head>
 <body>
 
-  <!-- Hero -->
   <section class="hero">
     <h1>Lipsticks 💄</h1>
     <p>Bold, beautiful, and long-lasting colors.</p>
   </section>
 
-  <!-- Lipstick Products -->
   <section class="products" id="lipstick-products">
     <div class="card">
       <img src="../pictures/images/lipstick/product-1.webp" alt="Lipstick">
@@ -154,7 +149,7 @@
       <button class="btn">Click Here</button>
     </div>
 
-    <!-- Hidden Lipstick Cards -->
+ 
     <div class="card hidden">
       <img src="../pictures/images/lipstick/product-4.jpg" alt="Lipstick">
       <h3>Berry Crush Lipstick</h3>
@@ -180,13 +175,13 @@
     </div>
   </section>
 
-  <!-- Toggle Button -->
+
   <div class="toggle-container">
     <button id="lipstick-toggle" class="toggle-btn">View All Lipsticks</button>
   </div>
 
   <script>
-    // Button click alert
+
     const buttons = document.querySelectorAll('.btn');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
@@ -194,7 +189,7 @@
       });
     });
 
-    // Toggle show/hide
+  
     const toggleBtn = document.getElementById('lipstick-toggle');
     const hiddenCards = document.querySelectorAll('#lipstick-products .hidden');
     let expanded = false;
