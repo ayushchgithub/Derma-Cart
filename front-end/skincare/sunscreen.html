@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunscreen Section</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+ 
+    .hero {
+      background: linear-gradient(135deg, #ffe6f0, #e6f7ff);
+      text-align: center;
+      padding: 4rem 2rem;
+      border-radius: 0 0 40px 40px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #444;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+  
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      transition: transform 0.6s ease;
+    }
+    .card img:hover {
+      transform: scale(1.1);
+    }
+
+    .card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      color: #444;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #ff6f91;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .btn, .toggle-btn {
+      background: #ff91a4;
+      color: #fff;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover, .toggle-btn:hover {
+      background: #ff6f91;
+    }
+
+    .toggle-container {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+ 
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <h1>Sunscreen ☀️</h1>
+    <p>Protect your skin from harmful UV rays.</p>
+  </section>
+
+
+  <section class="products" id="sunscreen-products">
+    <div class="card">
+      <img src="../pictures/images/sunscreen/product-1.avif" alt="Sunscreen">
+      <h3>SPF 30 Sunscreen</h3>
+      <p>Lightweight daily sun protection.</p>
+      <span class="price">₹299</span>
+      <button class="btn">Click Here</button>
+    </div>
+
+    <div class="card">
+      <img src="../pictures/images/sunscreen/product-2.jpg" alt="Sunscreen">
+      <h3>SPF 50 Sunscreen</h3>
+      <p>High protection for outdoor use.</p>
+      <span class="price">₹399</span>
+      <button class="btn">Click Here</button>
+    </div>
+
+    <div class="card">
+      <img src="../pictures/images/sunscreen/product-3.webp" alt="Sunscreen">
+      <h3>Matte Finish Sunscreen</h3>
+      <p>Controls oil & gives a smooth finish.</p>
+      <span class="price">₹349</span>
+      <button class="btn">Click Here</button>
+    </div>
+
+
+    <div class="card hidden">
+      <img src="../pictures/images/sunscreen/product-4.jpg" alt="Sunscreen">
+      <h3>Aloe Vera Sunscreen</h3>
+      <p>Soothes skin with natural hydration.</p>
+      <span class="price">₹279</span>
+      <button class="btn">Click Here</button>
+    </div>
+
+    <div class="card hidden">
+      <img src="../pictures/images/sunscreen/product-5.jpg" alt="Sunscreen">
+      <h3>Ubtan Turmeric Sunscreen</h3>
+      <p>Provides Barrier Against Sun Damage,Delays Skin Ageing,Treats Acne & Blemishes.</p>
+      <span class="price">₹519</span>
+      <button class="btn">Click Here</button>
+    </div>
+
+    <div class="card hidden">
+      <img src="../pictures/images/sunscreen/product-6.jpg" alt="Sunscreen">
+      <h3>Waterproof Sunscreen</h3>
+      <p>Long-lasting protection even in water.</p>
+      <span class="price">₹459</span>
+      <button class="btn">Click Here</button>
+    </div>
+  </section>
+
+  <div class="toggle-container">
+    <button id="sunscreen-toggle" class="toggle-btn">View All Sunscreens</button>
+  </div>
+
+  <script>
+
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        alert('Sunscreen added to cart!');
+      });
+    });
+
+    const toggleBtn = document.getElementById('sunscreen-toggle');
+    const hiddenCards = document.querySelectorAll('#sunscreen-products .hidden');
+    let expanded = false;
+
+    toggleBtn.addEventListener('click', () => {
+      hiddenCards.forEach(card => {
+        card.style.display = expanded ? 'none' : 'block';
+      });
+      expanded = !expanded;
+      toggleBtn.textContent = expanded ? "Show Less" : "View All Sunscreens";
+    });
+  </script>
+
+</body>
+</html>
